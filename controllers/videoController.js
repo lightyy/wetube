@@ -1,2 +1,2 @@
-export const home = (req, res) => res.send("home");
-export const search = (req, res) => res.send("search");
+export const home = (req, res) => res.send("Home");
+export const search = (req, res) => res.send("Search");
