@@ -4,7 +4,8 @@ export const videosDb = [
     title: "Video Awesome",
     description: "This is someting I love",
     views: 24,
-    videoFile: "https://archive.org/details/BigBuckBunny_124",
+    videoFile: "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
+    poster:"https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217",
     creator: {
       id: 121212,
       name: "KY",
@@ -16,7 +17,8 @@ export const videosDb = [
     title: "Video Super",
     description: "This is someting I love",
     views: 24,
-    videoFile: "https://archive.org/details/BigBuckBunny_124",
+    videoFile: "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
+    poster:"https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217",
     creator: {
       id: 121212,
       name: "KY",
@@ -28,7 +30,8 @@ export const videosDb = [
     title: "Video Nice",
     description: "This is someting I love",
     views: 24,
-    videoFile: "https://archive.org/details/BigBuckBunny_124",
+    videoFile: "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
+    poster:"https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217",
     creator: {
       id: 121212,
       name: "KY",
@@ -40,7 +43,8 @@ export const videosDb = [
     title: "Video Perfect",
     description: "This is someting I love",
     views: 24,
-    videoFile: "https://archive.org/details/BigBuckBunny_124",
+    videoFile: "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
+    poster:"https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217",
     creator: {
       id: 121212,
       name: "KY",
