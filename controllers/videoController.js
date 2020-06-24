@@ -1,8 +1,7 @@
-import { videosDb } from "../db";
 import routes from "../routes";
 
 export const home = (req, res) => {
-  res.render("home", { pageTitle: "home", videos: videosDb });
+  res.render("home", { pageTitle: "home", videos: db });
 };
 
 // export const videos = (req, res) =>  res.render("videos", { pageTitle: "videos" });
@@ -16,7 +15,7 @@ export const search = (req, res) => {
   res.render("search", {
     pageTitle: "search",
     searchingBy: searchingBy,
-    videos: videosDb,
+    videos: db,
   });
 };
 
