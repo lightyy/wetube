@@ -9,7 +9,7 @@ export const search = (req, res) => {
     query: { term: searchingBy },
   } = req;
   //   console.log(term);
-  res.render("search", { pageTitle: "search", searchingBy: searchingBy });
+  res.render("search", { pageTitle: "search", searchingBy: searchingBy, videos: videosDb });
 };
 export const videos = (req, res) =>
   res.render("videos", { pageTitle: "videos" });
