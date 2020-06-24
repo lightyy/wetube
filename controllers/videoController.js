@@ -1,21 +1,35 @@
 import { videosDb } from "../db";
+import routes from "../routes";
 
 export const home = (req, res) => {
   res.render("home", { pageTitle: "home", videos: videosDb });
 };
+
+// export const videos = (req, res) =>  res.render("videos", { pageTitle: "videos" });
+
 export const search = (req, res) => {
   //   const searchingBy = req.query.term;
   const {
     query: { term: searchingBy },
   } = req;
-  //   console.log(term);
-  res.render("search", { pageTitle: "search", searchingBy: searchingBy, videos: videosDb });
+  // console.log(searchingBy);
+  res.render("search", {
+    pageTitle: "search",
+    searchingBy: searchingBy,
+    videos: videosDb,
+  });
 };
-export const videos = (req, res) =>
-  res.render("videos", { pageTitle: "videos" });
 
-export const upload = (req, res) =>
+export const getUpload = (req, res) =>
   res.render("upload", { pageTitle: "upload" });
+
+export const postUpload = (req, res) => {
+  const {
+    body: { file, title, description },
+  } = req;
+  //To Do : Upload and save video
+  res.redirect(routes.videoDetail(48648654));
+};
 
 export const videoDetail = (req, res) =>
   res.render("videoDetail", { pageTitle: "videoDetail" });
