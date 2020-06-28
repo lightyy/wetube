@@ -2,8 +2,14 @@ import routes from "../routes";
 import Video from "../models/Video";
 
 export const home = async (req, res) => {
-  const videos = await Video.find({});
-  res.render("home", { pageTitle: "home", videos });
+  try {
+    const videos = await Video.find({});
+    // throw Error("lalalala");
+    res.render("home", { pageTitle: "home", videos });
+  } catch (error) {
+    console.log(error);
+    res.render("home", { pageTitle: "home", videos: [] });
+  }
 };
 
 // export const videos = (req, res) =>  res.render("videos", { pageTitle: "videos" });
