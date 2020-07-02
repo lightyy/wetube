@@ -1,6 +1,5 @@
 import routes from "../routes";
 import Video from "../models/Video";
-import bodyParser from "body-parser";
 
 export const home = async (req, res) => {
   try {
@@ -74,14 +73,20 @@ export const postEditVideo = async (req, res) => {
     body: { title, description },
   } = req;
   try {
-    await Video.findOneAndUpdate({ id }, { title, description });
-    res.redirect(routes.videoDetail(id))
-
+    await Video.findOneAndUpdate({ _id: id }, { title, description });
+    res.redirect(routes.videoDetail(id));
   } catch (error) {
     console.log(error);
     res.redirect(routes.home);
   }
 };
 
-export const deleteVideo = (req, res) =>
-  res.render("deleteVideo", { pageTitle: "deleteVideo" });
+export const deleteVideo = async (req, res) => {
+  const {
+    params: { id },
+  } = req;
+  try {
+    await Video.findOneAndRemove({ _id: id });
+  } catch (error) {}
+  res.redirect(routes.home);
+};
