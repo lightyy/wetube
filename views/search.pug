@@ -4,9 +4,12 @@ include mixins/videoBlock
 block content
     .search__header
         h3 Searching for : #{searchingBy}
-    .search__moives
-    if videos.length ===0
-        h5 No Movie Found
-    each item in movies
-        h5 #{item.title}
-    })
+    .search__videos
+        each item in videos
+            +videoBlock({
+            title : item.title,
+            views : item.views,
+            videoFile : item.videoFile,
+            description : item.description,
+            poster : item.poster,
+            })
